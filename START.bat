@@ -51,31 +51,32 @@ echo [INSTALL] Upgrading pip...
 "%VENV%\Scripts\python.exe" -m pip install --quiet --upgrade pip
 
 REM --- Install all dependencies ---
-echo [INSTALL] Installing packages (first run may take 3-5 min)...
-"%PIP%" install --quiet ^
-    "fastapi==0.111.0" ^
-    "uvicorn[standard]==0.30.1" ^
-    "python-multipart==0.0.9" ^
-    "langchain==0.3.25" ^
-    "langchain-core==0.3.65" ^
-    "langchain-community==0.3.24" ^
-    "langchain-openai==0.2.14" ^
-    "langchain-huggingface==0.1.2" ^
-    "langchain-chroma==0.1.4" ^
-    "pydantic==2.11.7" ^
-    "pydantic-settings==2.9.1" ^
-    "python-dotenv==1.1.0" ^
-    "chromadb==0.5.23" ^
-    "pymupdf==1.27.2" ^
-    "sentence-transformers==3.0.1" ^
-    "openai==1.84.0" ^
-    "redis==5.2.1" ^
-    "python-jose[cryptography]==3.3.0" ^
-    "passlib[bcrypt]==1.7.4" ^
-    "httpx==0.27.0" ^
-    "prometheus-client==0.21.1" ^
-    "opentelemetry-api==1.28.0" ^
-    "opentelemetry-sdk==1.28.0"
+echo [INSTALL] Installing and upgrading packages to latest version...
+"%PIP%" install --upgrade ^
+    "fastapi" ^
+    "uvicorn[standard]" ^
+    "python-multipart" ^
+    "langchain" ^
+    "langchain-core" ^
+    "langchain-community" ^
+    "langchain-openai" ^
+    "langchain-huggingface" ^
+    "langchain-chroma" ^
+    "pydantic" ^
+    "pydantic-settings" ^
+    "python-dotenv" ^
+    "chromadb" ^
+    "pymupdf" ^
+    "sentence-transformers" ^
+    "openai" ^
+    "redis" ^
+    "python-jose[cryptography]" ^
+    "passlib[bcrypt]" ^
+    "httpx" ^
+    "prometheus-client" ^
+    "opentelemetry-api" ^
+    "opentelemetry-sdk"
+
 
 if %ERRORLEVEL% NEQ 0 (
     echo [ERROR] Package installation failed!
