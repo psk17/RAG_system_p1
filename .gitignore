@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment
+.env
+.venv/
+
+# Poetry
+poetry.lock
+
+# Build
+build/
+dist/
+
+# IDE
+.vscode/
+
+# Logs
+*.log
+
+# Test artifacts
+htmlcov/
+.coverage
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Private database contents (ChromaDB files)
+data/
