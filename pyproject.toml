@@ -34,7 +34,7 @@ psycopg2-binary = "*"
 # Embeddings
 openai = "*"
 sentence-transformers = "*"
-onnxruntime = "*"
+onnxruntime = "1.16.3"
 
 # Config & Validation
 pydantic = "*"
